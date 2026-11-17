@@ -6,7 +6,7 @@ from group import in_subgroup
 def keygen(group):
 
     p, q, g = group
-    x=secrets.randbelow(q-2)+1
+    x=secrets.randbelow(q-1)+1
     y=modpow(g,x,p)
     return x,y
   
